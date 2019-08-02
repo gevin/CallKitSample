@@ -40,6 +40,7 @@ class DailCallViewController: UIViewController, CXProviderDelegate {
         
     }
     
+    // 1.
     func callInit() {
         let config = CXProviderConfiguration(localizedName: "My Example")
         config.iconTemplateImageData = UIImage(named: "userPic.png")!.pngData()
@@ -53,6 +54,7 @@ class DailCallViewController: UIViewController, CXProviderDelegate {
         callController = CXCallController()
     }
     
+    // 2.
     func startCall() {
         callIdOpt = UUID()
         let controller = CXCallController()
@@ -60,6 +62,7 @@ class DailCallViewController: UIViewController, CXProviderDelegate {
         controller.request(transaction, completion: { error in })
     }
     
+    // 4.
     func endCall() {
         guard let callId = callIdOpt else {return}
         let endCallAction = CXEndCallAction.init(call: callId)
@@ -133,18 +136,16 @@ class DailCallViewController: UIViewController, CXProviderDelegate {
     // If provider:executeTransaction:error: returned NO, each perform*CallAction method is called sequentially for each action in the transaction
     func provider(_ provider: CXProvider, perform action: CXStartCallAction) {
         print("provider Start Call Action");
-        //todo: configure audio session
-        //todo: start network call
+        // 3.
         provider.reportOutgoingCall(with: action.callUUID, startedConnectingAt: nil)
         provider.reportOutgoingCall(with: action.callUUID, connectedAt: nil)
         self.displayTalkingUI(talking: true)
-        // 這裡執行完成後，退到背景，連線會也保持
+        // 這裡執行完成後，狀態就會是通話中，app 退到背景也不會 suspend
         action.fulfill()
     }
     
     func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
         print("provider End Call Action")
-        // 這裡執行完成後，退到背景，連線會也保持
         self.displayTalkingUI(talking: false)
         action.fulfill()
     }

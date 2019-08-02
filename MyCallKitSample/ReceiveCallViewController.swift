@@ -33,6 +33,7 @@ class ReceiveCallViewController: UIViewController, CXProviderDelegate {
         self.callInit()
     }
     
+    // 1. 
     func callInit() {
         let config = CXProviderConfiguration(localizedName: "My Example")
         config.iconTemplateImageData = UIImage(named: "userPic.png")!.pngData()
@@ -46,7 +47,7 @@ class ReceiveCallViewController: UIViewController, CXProviderDelegate {
         callController = CXCallController()
     }
     
-    // 
+    // 2.
     func receiveVoipPush() {
         
         let update = CXCallUpdate()
@@ -55,6 +56,7 @@ class ReceiveCallViewController: UIViewController, CXProviderDelegate {
         callIdOpt = UUID()
         // #Gevin_Note: 
         //  The native CallKit UI can't keep after press accept button.
+        // 3.
         provider.reportNewIncomingCall(with: callIdOpt!, update: update, completion: { error in 
             if error != nil {
                 print(error ?? "")
@@ -65,20 +67,6 @@ class ReceiveCallViewController: UIViewController, CXProviderDelegate {
                 self.receivePushButton.isHidden = true
             }
         })
-    }
-    
-    func endCall() {
-        guard let callId = callIdOpt else {return}
-        let endCallAction = CXEndCallAction.init(call: callId)
-        let transaction = CXTransaction.init()
-        transaction.addAction(endCallAction)
-        callController?.request(transaction, completion: {[weak self] (error : Error?) in
-            guard self != nil else {return}
-            if error != nil {
-                print("\(error?.localizedDescription ?? "")")
-            }
-        })
-    
     }
     
     func holdCall(hold : Bool) {
@@ -93,6 +81,23 @@ class ReceiveCallViewController: UIViewController, CXProviderDelegate {
             }
         })
     }
+    
+    // 4.
+    func endCall() {
+        guard let callId = callIdOpt else {return}
+        let endCallAction = CXEndCallAction.init(call: callId)
+        let transaction = CXTransaction.init()
+        transaction.addAction(endCallAction)
+        callController?.request(transaction, completion: {[weak self] (error : Error?) in
+            guard self != nil else {return}
+            if error != nil {
+                print("\(error?.localizedDescription ?? "")")
+            }
+        })
+    
+    }
+    
+
     
     // MARK: - Action
     
