@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCallKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIa-Jz-9KN">
+                                <rect key="frame" x="152" y="277" width="110" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Receive a call"/>
+                                <connections>
+                                    <segue destination="NbF-XM-ZXQ" kind="presentation" identifier="ReceiveCallViewController" id="7IX-We-m3i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rge-Wd-jdl">
+                                <rect key="frame" x="168.5" y="378" width="77" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Dail a call"/>
+                                <connections>
+                                    <segue destination="HF9-ef-RZd" kind="presentation" identifier="DailCallViewController" id="nnt-oA-6pj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rge-Wd-jdl" firstAttribute="top" secondItem="eIa-Jz-9KN" secondAttribute="bottom" constant="67" id="4xN-2o-Mjb"/>
+                            <constraint firstItem="rge-Wd-jdl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FSA-r2-PbC"/>
+                            <constraint firstItem="eIa-Jz-9KN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KZi-qq-j6n"/>
+                            <constraint firstItem="eIa-Jz-9KN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="233" id="edX-NI-89V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Receive Call View Controller-->
+        <scene sceneID="p3Q-Wb-LIe">
+            <objects>
+                <viewController storyboardIdentifier="ReceiveCallViewController" id="NbF-XM-ZXQ" customClass="ReceiveCallViewController" customModule="MyCallKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YhD-as-0kR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvp-DJ-lvk">
+                                <rect key="frame" x="132.5" y="436" width="149" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Receive Voip Push"/>
+                                <connections>
+                                    <action selector="receiveVoipPushClicked:" destination="NbF-XM-ZXQ" eventType="touchUpInside" id="J4o-Vs-F1s"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VU0-Yj-KW0">
+                                <rect key="frame" x="231" y="336" width="89" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.90588235289999997" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
+                                <state key="normal" title="Hold Call">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="holdCallClicked:" destination="NbF-XM-ZXQ" eventType="touchUpInside" id="ErD-fe-l2v"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1el-5j-ccg">
+                                <rect key="frame" x="101" y="336" width="82" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.90588235289999997" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
+                                <state key="normal" title="End Call">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="endCallClicked:" destination="NbF-XM-ZXQ" eventType="touchUpInside" id="FCj-CW-s9C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1el-5j-ccg" firstAttribute="trailing" secondItem="Lgn-qI-tF4" secondAttribute="centerX" constant="-24" id="FU3-hs-1Pq"/>
+                            <constraint firstItem="dvp-DJ-lvk" firstAttribute="top" secondItem="1el-5j-ccg" secondAttribute="bottom" constant="70" id="NA0-7q-b7y"/>
+                            <constraint firstItem="dvp-DJ-lvk" firstAttribute="centerX" secondItem="Lgn-qI-tF4" secondAttribute="centerX" id="RIy-cz-au9"/>
+                            <constraint firstItem="VU0-Yj-KW0" firstAttribute="centerY" secondItem="1el-5j-ccg" secondAttribute="centerY" id="dke-tx-eH0"/>
+                            <constraint firstItem="dvp-DJ-lvk" firstAttribute="centerY" secondItem="Lgn-qI-tF4" secondAttribute="centerY" id="kcD-fO-4xa"/>
+                            <constraint firstItem="VU0-Yj-KW0" firstAttribute="leading" secondItem="Lgn-qI-tF4" secondAttribute="centerX" constant="24" id="zPu-Pa-MoK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lgn-qI-tF4"/>
+                    </view>
+                    <connections>
+                        <outlet property="endCallButton" destination="1el-5j-ccg" id="JwL-Eq-Rcb"/>
+                        <outlet property="holdCallButton" destination="VU0-Yj-KW0" id="nJj-Zt-jDL"/>
+                        <outlet property="receivePushButton" destination="dvp-DJ-lvk" id="Nye-e3-sJg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCg-Ob-zuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="19"/>
+        </scene>
+        <!--Dail Call View Controller-->
+        <scene sceneID="kvf-yd-a57">
+            <objects>
+                <viewController storyboardIdentifier="DailCallViewController" id="HF9-ef-RZd" customClass="DailCallViewController" customModule="MyCallKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PqB-9y-Psg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqC-pN-NvI">
+                                <rect key="frame" x="162.5" y="436" width="89" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Start a Call"/>
+                                <connections>
+                                    <action selector="startCallClicked:" destination="HF9-ef-RZd" eventType="touchUpInside" id="YrB-q5-r07"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRt-5Q-HfP">
+                                <rect key="frame" x="88.5" y="376" width="237" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="WiA-p2-grC"/>
+                                    <constraint firstAttribute="width" constant="237" id="zJ2-vQ-x0D"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rm-fN-2jU">
+                                <rect key="frame" x="231" y="316" width="89" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.90588235289999997" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
+                                <state key="normal" title="Hold Call">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="holdCallClicked:" destination="HF9-ef-RZd" eventType="touchUpInside" id="Rdn-zT-RII"/>
+                                    <action selector="holdCallClicked:" destination="NbF-XM-ZXQ" eventType="touchUpInside" id="SkU-XH-PVS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es3-W4-1qM">
+                                <rect key="frame" x="101" y="316" width="82" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.90588235289999997" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
+                                <state key="normal" title="End Call">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="endCallClicked:" destination="NbF-XM-ZXQ" eventType="touchUpInside" id="hLQ-vo-VB1"/>
+                                    <action selector="endCallClicked:" destination="HF9-ef-RZd" eventType="touchUpInside" id="tDG-Ew-QJ4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H02-J6-aKe">
+                                <rect key="frame" x="29" y="382.5" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rqC-pN-NvI" firstAttribute="top" secondItem="Es3-W4-1qM" secondAttribute="bottom" constant="90" id="3vc-YU-00n"/>
+                            <constraint firstItem="TRt-5Q-HfP" firstAttribute="centerX" secondItem="ShW-b0-PiF" secondAttribute="centerX" id="Czs-14-kag"/>
+                            <constraint firstItem="5rm-fN-2jU" firstAttribute="centerY" secondItem="Es3-W4-1qM" secondAttribute="centerY" id="Dd3-FW-L2u"/>
+                            <constraint firstItem="rqC-pN-NvI" firstAttribute="centerY" secondItem="ShW-b0-PiF" secondAttribute="centerY" id="EDL-Al-ql3"/>
+                            <constraint firstItem="H02-J6-aKe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ShW-b0-PiF" secondAttribute="leading" constant="8" id="ENS-Kc-W5R"/>
+                            <constraint firstItem="rqC-pN-NvI" firstAttribute="centerX" secondItem="ShW-b0-PiF" secondAttribute="centerX" id="GyA-s3-DRm"/>
+                            <constraint firstItem="H02-J6-aKe" firstAttribute="centerY" secondItem="TRt-5Q-HfP" secondAttribute="centerY" id="Lib-4L-SVu"/>
+                            <constraint firstItem="TRt-5Q-HfP" firstAttribute="leading" secondItem="H02-J6-aKe" secondAttribute="trailing" constant="8.5" id="SZ7-pc-iu7"/>
+                            <constraint firstItem="rqC-pN-NvI" firstAttribute="top" secondItem="TRt-5Q-HfP" secondAttribute="bottom" constant="26" id="d51-IN-Y7Q"/>
+                            <constraint firstItem="Es3-W4-1qM" firstAttribute="trailing" secondItem="ShW-b0-PiF" secondAttribute="centerX" constant="-24" id="iou-dZ-Enf"/>
+                            <constraint firstItem="5rm-fN-2jU" firstAttribute="leading" secondItem="ShW-b0-PiF" secondAttribute="centerX" constant="24" id="kV8-g5-Rbw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ShW-b0-PiF"/>
+                    </view>
+                    <connections>
+                        <outlet property="endCallButton" destination="Es3-W4-1qM" id="F90-KI-RTG"/>
+                        <outlet property="holdCallButton" destination="5rm-fN-2jU" id="eYz-78-BnW"/>
+                        <outlet property="phoneNumberTextfield" destination="TRt-5Q-HfP" id="5nR-ri-ZIA"/>
+                        <outlet property="phoneTitleLabel" destination="H02-J6-aKe" id="71v-GK-K3L"/>
+                        <outlet property="startCallButton" destination="rqC-pN-NvI" id="h4e-E6-OcP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Zy-zd-cGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1495.6521739130435" y="724.55357142857144"/>
+        </scene>
+    </scenes>
+</document>

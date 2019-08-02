@@ -12,16 +12,23 @@
 		EE5FDB7322F3BB1100C5B68A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5FDB7122F3BB1100C5B68A /* Main.storyboard */; };
 		EE5FDB7522F3BB1300C5B68A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE5FDB7422F3BB1300C5B68A /* Assets.xcassets */; };
 		EE5FDB7822F3BB1300C5B68A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5FDB7622F3BB1300C5B68A /* LaunchScreen.storyboard */; };
+		EE5FDB8022F3BE1B00C5B68A /* ReceiveCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5FDB7F22F3BE1B00C5B68A /* ReceiveCallViewController.swift */; };
+		EE5FDB8222F3BE4100C5B68A /* DailCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5FDB8122F3BE4100C5B68A /* DailCallViewController.swift */; };
+		EE5FDB8422F3DE2A00C5B68A /* userPic.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5FDB8322F3DE2900C5B68A /* userPic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE5FDB6A22F3BB1100C5B68A /* CallKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE5FDB6A22F3BB1100C5B68A /* MyCallKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCallKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5FDB6D22F3BB1100C5B68A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE5FDB6F22F3BB1100C5B68A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE5FDB7222F3BB1100C5B68A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE5FDB7422F3BB1300C5B68A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE5FDB7722F3BB1300C5B68A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE5FDB7922F3BB1300C5B68A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE5FDB7F22F3BE1B00C5B68A /* ReceiveCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCallViewController.swift; sourceTree = "<group>"; };
+		EE5FDB8122F3BE4100C5B68A /* DailCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailCallViewController.swift; sourceTree = "<group>"; };
+		EE5FDB8322F3DE2900C5B68A /* userPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPic.png; sourceTree = "<group>"; };
+		EE5FDB8522F4012500C5B68A /* ringtone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ringtone.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +45,7 @@
 		EE5FDB6122F3BB1100C5B68A = {
 			isa = PBXGroup;
 			children = (
-				EE5FDB6C22F3BB1100C5B68A /* CallKitSample */,
+				EE5FDB6C22F3BB1100C5B68A /* MyCallKitSample */,
 				EE5FDB6B22F3BB1100C5B68A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +53,34 @@
 		EE5FDB6B22F3BB1100C5B68A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE5FDB6A22F3BB1100C5B68A /* CallKitSample.app */,
+				EE5FDB6A22F3BB1100C5B68A /* MyCallKitSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE5FDB6C22F3BB1100C5B68A /* CallKitSample */ = {
+		EE5FDB6C22F3BB1100C5B68A /* MyCallKitSample */ = {
 			isa = PBXGroup;
 			children = (
+				EE5FDB8322F3DE2900C5B68A /* userPic.png */,
+				EE5FDB8522F4012500C5B68A /* ringtone.caf */,
 				EE5FDB6D22F3BB1100C5B68A /* AppDelegate.swift */,
 				EE5FDB6F22F3BB1100C5B68A /* ViewController.swift */,
+				EE5FDB7F22F3BE1B00C5B68A /* ReceiveCallViewController.swift */,
+				EE5FDB8122F3BE4100C5B68A /* DailCallViewController.swift */,
 				EE5FDB7122F3BB1100C5B68A /* Main.storyboard */,
 				EE5FDB7422F3BB1300C5B68A /* Assets.xcassets */,
 				EE5FDB7622F3BB1300C5B68A /* LaunchScreen.storyboard */,
 				EE5FDB7922F3BB1300C5B68A /* Info.plist */,
 			);
-			path = CallKitSample;
+			path = MyCallKitSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE5FDB6922F3BB1100C5B68A /* CallKitSample */ = {
+		EE5FDB6922F3BB1100C5B68A /* MyCallKitSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE5FDB7C22F3BB1300C5B68A /* Build configuration list for PBXNativeTarget "CallKitSample" */;
+			buildConfigurationList = EE5FDB7C22F3BB1300C5B68A /* Build configuration list for PBXNativeTarget "MyCallKitSample" */;
 			buildPhases = (
 				EE5FDB6622F3BB1100C5B68A /* Sources */,
 				EE5FDB6722F3BB1100C5B68A /* Frameworks */,
@@ -79,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = CallKitSample;
+			name = MyCallKitSample;
 			productName = CallKitSample;
-			productReference = EE5FDB6A22F3BB1100C5B68A /* CallKitSample.app */;
+			productReference = EE5FDB6A22F3BB1100C5B68A /* MyCallKitSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -96,10 +107,15 @@
 				TargetAttributes = {
 					EE5FDB6922F3BB1100C5B68A = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = EE5FDB6522F3BB1100C5B68A /* Build configuration list for PBXProject "CallKitSample" */;
+			buildConfigurationList = EE5FDB6522F3BB1100C5B68A /* Build configuration list for PBXProject "MyCallKitSample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE5FDB6922F3BB1100C5B68A /* CallKitSample */,
+				EE5FDB6922F3BB1100C5B68A /* MyCallKitSample */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +140,7 @@
 			files = (
 				EE5FDB7822F3BB1300C5B68A /* LaunchScreen.storyboard in Resources */,
 				EE5FDB7522F3BB1300C5B68A /* Assets.xcassets in Resources */,
+				EE5FDB8422F3DE2A00C5B68A /* userPic.png in Resources */,
 				EE5FDB7322F3BB1100C5B68A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5FDB8222F3BE4100C5B68A /* DailCallViewController.swift in Sources */,
+				EE5FDB8022F3BE1B00C5B68A /* ReceiveCallViewController.swift in Sources */,
 				EE5FDB7022F3BB1100C5B68A /* ViewController.swift in Sources */,
 				EE5FDB6E22F3BB1100C5B68A /* AppDelegate.swift in Sources */,
 			);
@@ -284,12 +303,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88X9DS6ETV;
-				INFOPLIST_FILE = CallKitSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyCallKitSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gevinchen.CallKitSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gevinchen.MyCallKitSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,12 +322,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88X9DS6ETV;
-				INFOPLIST_FILE = CallKitSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyCallKitSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gevinchen.CallKitSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gevinchen.MyCallKitSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE5FDB6522F3BB1100C5B68A /* Build configuration list for PBXProject "CallKitSample" */ = {
+		EE5FDB6522F3BB1100C5B68A /* Build configuration list for PBXProject "MyCallKitSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE5FDB7A22F3BB1300C5B68A /* Debug */,
@@ -326,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE5FDB7C22F3BB1300C5B68A /* Build configuration list for PBXNativeTarget "CallKitSample" */ = {
+		EE5FDB7C22F3BB1300C5B68A /* Build configuration list for PBXNativeTarget "MyCallKitSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE5FDB7D22F3BB1300C5B68A /* Debug */,

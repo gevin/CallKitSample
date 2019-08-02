@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CallKitSample.xcodeproj">
+      location = "self:/Volumes/My_Passport/MyRepository/CallKitSample/MyCallKitSample.xcodeproj">
    </FileRef>
 </Workspace>
